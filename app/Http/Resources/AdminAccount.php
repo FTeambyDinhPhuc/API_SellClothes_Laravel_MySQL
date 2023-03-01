@@ -14,6 +14,11 @@ class AdminAccount extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'idAdminAccount' => $this->idAdminAccount,
+            'UserNameAdmin' => $this->UserNameAdmin,
+            'PasswordAdmin' => $this->PasswordAdmin,
+            'token' => $this->token,
+          ];
     }
 }

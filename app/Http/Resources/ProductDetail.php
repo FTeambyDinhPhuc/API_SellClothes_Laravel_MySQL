@@ -14,6 +14,10 @@ class ProductDetail extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'idProductDetail' => $this->idProductDetail,
+            'idProduct' => $this->idProduct,
+            'PriceProduct' => $this->PriceProduct,
+         ];
     }
 }

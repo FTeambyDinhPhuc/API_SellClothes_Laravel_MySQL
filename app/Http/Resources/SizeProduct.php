@@ -14,6 +14,9 @@ class SizeProduct extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'idSizeProduct' => $this->idSizeProduct,
+            'NameSizeProduct' => $this->NameSizeProduct,
+          ];
     }
 }

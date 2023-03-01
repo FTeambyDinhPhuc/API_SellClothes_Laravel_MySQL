@@ -14,6 +14,15 @@ class Account extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'idAccount' => $this->idAccount,
+            'FullName' => $this->FullName,
+            'Email' => $this->Email,
+            'PhoneNumber' => $this->PhoneNumber,
+            'AddressUser' => $this->AddressUser,
+            'PaswordUser' => $this->PaswordUser,
+            'StatusAccount' => $this->StatusAccount,
+            'token' => $this->token,
+          ];
     }
 }

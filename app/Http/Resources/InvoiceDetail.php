@@ -14,6 +14,12 @@ class InvoiceDetail extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'idAccidInvoiceDetailount' => $this->idInvoiceDetail,
+            'idProduct' => $this->idProduct,
+            'idInvoice' => $this->idInvoice,
+            'Quantity' => $this->Quantity,
+            'UnitPrice' => $this->UnitPrice,
+          ];
     }
 }

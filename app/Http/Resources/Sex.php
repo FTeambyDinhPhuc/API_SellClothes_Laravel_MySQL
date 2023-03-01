@@ -14,6 +14,9 @@ class Sex extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'idSex' => $this->idSex,
+            'NameSex' => $this->NameSex,
+          ];
     }
 }

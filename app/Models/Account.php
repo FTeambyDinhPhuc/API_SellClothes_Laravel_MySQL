@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Account extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'idAccount',
+        'FullName',
+        'Email',
+        'PhoneNumber',
+        'AddressUser',
+        'PaswordUser',
+        'StatusAccount',
+        'token'
+    ];
 }
